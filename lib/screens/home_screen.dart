@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.all(8),
                   child: Row(
                     children: [
-                      for(int i = 0; i<7; i++)
+                      // for(int i = 0; i<7; i++)
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 10),
                         padding: EdgeInsets.all(10),
