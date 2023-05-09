@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui_2/screens/post_screen.dart';
 import 'package:travel_app_ui_2/widgets/home_app_bar.dart';
 import 'package:travel_app_ui_2/widgets/home_bottom_bar.dart';
 
@@ -41,7 +42,9 @@ class HomeScreen extends StatelessWidget {
                             shrinkWrap: true,
                             itemBuilder: (BuildContext context, int index) {
                               return InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PostScreen()));
+                                },
                                 child: Container(
                                   width: 160,
                                   padding: EdgeInsets.all(20),
@@ -70,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                                       Container(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
-                                          "City name",
+                                          cityName[index],
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 18,
@@ -128,7 +131,9 @@ class HomeScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>PostScreen()));
+                              },
                               child: Container(
                                 height: 200,
                                 decoration: BoxDecoration(
